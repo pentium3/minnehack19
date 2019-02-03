@@ -28,7 +28,7 @@ What's more, since argriculture product price is mainly affected by supply and d
 
 ## Requirements
 
-django == 1.25.0
+django == 1.10.5
 
 ## Installation
 
@@ -54,6 +54,8 @@ Please contact our teammembers through GitHub or email (on their home page).
 * [kk94wang](https://github.com/kk94wang)
 * [lirenjie95](https://github.com/lirenjie95)
 * [pentium3](https://github.com/pentium3)
+
+Table 31
 
 ## License
 
