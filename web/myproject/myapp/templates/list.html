@@ -1,111 +1,81 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Minimal Django File Upload Example</title>
-    </head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet" />
+    <link href="/static/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="s013">
+        <form action="." class="crawl" method="GET">
 
-    <body>
 
-        <p>Click the button to get your coordinates.</p>
+        <fieldset>
+          <legend>QUICK FIND YOUR CITY</legend>
+        </fieldset>
 
-        <button onclick="getLocation()">Try It</button>
+        <div class="inner-form">
+          <div class="left">
 
-        <p id="demo"></p>
-
-	<script>
-    var x = document.getElementById("demo");
-    function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-    	}
-
-    function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude; 
-    }
-        </script>
-        <!-- List of uploaded documents 
-        {% if documents %}
-            <ul>
-                {% for document in documents %}
-                    <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No documents.</p>
-        {% endif %}		-->
-
-<!--
-	<ul>
-	    <li><a>{{newdoc}}</a></li>
-	</ul>
-	{% if newdoc %}
-	    <ul>
-		{% ifequal result 0 %}
-		    <font>This is your new avatar! Enjoy it  </font>
-            <img src="../../media/op3.jpg">
-		{% endifequal %}
-		{% ifequal result 1 %}
-		    <font color="white" style="background:#0000FF">Active</font>
-		{% endifequal %}
-	    </ul>
-	{% endif %}
-!-->
-    <div class="left">
-
-        <!-- Upload form. Note enctype attribute
-        <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <p>{{ form.non_field_errors }}</p>
-
-            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
-
-            <p>
-                {{ form.docfile.errors }}
-                {{ form.docfile }}
-            </p>
-
-            <p><input type="submit" value="Upload"/></p>
-        </form> !-->
-
-        <div id="container">
-            <div class="wrap">
-                <form action="." class="crawl" method="GET">
-                        <div class="input-wrap first">
-                                <div class="input-field first">
-                                  <label>ZIPCODE</label>
-                                    <input type="text" name="zipcode" value="{{query|escape}}" placeholder="ex: 55455" />
-                                </div>
-                              </div>
-                      
-                              <div class="input-wrap second">
-                                <div class="input-field second">
-                                  <label>PlANT</label>
-                                  <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                      <option placeholder="" value="rice">Jasmine Rice</option>
-                                      <option value="corn1">Pop Corn</option>
-                                      <option value="corn2">Sweet Corn</option>
-                                      <option value="cauli">Cauliflower</option>
-                                      <option value="wheat">Wheat</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                    <input type="text" name="q" value="{{query|escape}}">
-                    <button type="submit">提交</button>
-                </form>
-                {% if results %}
-                    <h2>{{ results }}</h2>
+            <div class="input-wrap first">
+              <div class="input-field first">
+                <label>LOCATION</label>
+                {% if loc %}
+                    <h2>{{ loc }}</h2>
                 {% endif %}
+              </div>
             </div>
+
+            <div class="input-wrap second">
+              <div class="input-field second">
+                <label>PlANT</label>
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="rice">Jasmine Rice</option>
+                    <option value="corn1">Pop Corn</option>
+                    <option value="corn2">Sweet Corn</option>
+                    <option value="cauli">Cauliflower</option>
+                    <option value="wheat">Wheat</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrap third">
+                <div class="input-field first">
+                  <label>IRRIGATION OF TODAY</label>
+                  <form method="post">
+                {% if ans %}
+                    <h2>{{ ans }}</h2>
+                {% endif %}
+                  </form>
+                </div>
+            </div>
+
+          </div>
+          <button class="btn-search" type="submit">GO</button>
         </div>
 
-    </body>
+      </form>
+    </div>
+<!--
+<div class="s014">
+    <form>
+        <textarea id="output" row=3 cols=25></textarea>
+    </form>
+</div>
+-->
+    <script>
+      const choices = new Choices('[data-trigger]',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+      });
 
+    </script>
+
+
+  </body>
 </html>

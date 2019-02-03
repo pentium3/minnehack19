@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Django File Upload Example</title>
+    </head>
+
+    <body>
+    <div class="left">
+        <div id="container">
+            <div class="wrap">
+                <form action="." class="crawl" method="GET">
+                        <div class="input-wrap first">
+                                <div class="input-field first">
+                                  <label>ZIPCODE</label>
+                                    <input type="text" name="zipcode" value="{{query|escape}}" placeholder="ex: 55455" />
+                                </div>
+                              </div>
+                      
+                              <div class="input-wrap second">
+                                <div class="input-field second">
+                                  <label>PlANT</label>
+                                  <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                      <option placeholder="" value="rice">Jasmine Rice</option>
+                                      <option value="corn1">Pop Corn</option>
+                                      <option value="corn2">Sweet Corn</option>
+                                      <option value="cauli">Cauliflower</option>
+                                      <option value="wheat">Wheat</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    <input type="text" name="q" value="{{query|escape}}">
+                    <button type="submit">提交</button>
+                </form>
+                {% if loc %}
+                    <h2>{{ loc }}</h2>
+                    <h2>{{ ans }}</h2>
+                {% endif %}
+            </div>
+        </div>
+
+    </body>
+
+</html>

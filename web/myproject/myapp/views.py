@@ -49,17 +49,19 @@ from myproject.myapp.classify import classify
 def list(request):
     ip = request.META['REMOTE_ADDR']
     plant = request.GET.get('choices-single-defaul','')
-    results = []
-    if plant:
-        results.append(str(plant))
+    res = ""
+    loc = []
+    ans = []
     print(plant)
-    print(ip)
     if(plant):
         res = classify(plant, ip)
-        results.append(res)
-    print(results)
+        _loc, _ans = res.split('|')
+        loc.append(_loc)
+        ans.append(_ans)
+    print(loc)
+    print(ans)
     return render(
         request,
         'list.html',
-        {'results': results, }
+        {'loc': loc, 'ans': ans,}
     )
