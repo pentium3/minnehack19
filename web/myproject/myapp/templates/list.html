@@ -17,10 +17,10 @@
             <p>No documents.</p>
         {% endif %}		-->
 
+<!--
 	<ul>
 	    <li><a>{{newdoc}}</a></li>
 	</ul>
-
 	{% if newdoc %}
 	    <ul>
 		{% ifequal result 0 %}
@@ -32,8 +32,10 @@
 		{% endifequal %}
 	    </ul>
 	{% endif %}
+!-->
+    <div class="left">
 
-        <!-- Upload form. Note enctype attribute! -->
+        <!-- Upload form. Note enctype attribute
         <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <p>{{ form.non_field_errors }}</p>
@@ -46,7 +48,42 @@
             </p>
 
             <p><input type="submit" value="Upload"/></p>
-        </form>
+        </form> !-->
+
+        <div id="container">
+            <div class="wrap">
+                <form action="." class="crawl" method="GET">
+                        <div class="input-wrap first">
+                                <div class="input-field first">
+                                  <label>ZIPCODE</label>
+                                    <input type="text" name="zipcode" value="{{query|escape}}" placeholder="ex: 55455" />
+                                </div>
+                              </div>
+                      
+                              <div class="input-wrap second">
+                                <div class="input-field second">
+                                  <label>PlANT</label>
+                                  <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                      <option placeholder="" value="rice">Jasmine Rice</option>
+                                      <option value="corn1">Pop Corn</option>
+                                      <option value="corn2">Sweet Corn</option>
+                                      <option value="cauli">Cauliflower</option>
+                                      <option value="wheat">Wheat</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    <input type="text" name="q" value="{{query|escape}}">
+                    <button type="submit">提交</button>
+                </form>
+                {% if results %}
+                    <h2>{{ results }}</h2>
+                {% endif %}
+            </div>
+        </div>
+
     </body>
 
 </html>
