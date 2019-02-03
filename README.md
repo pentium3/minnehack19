@@ -15,7 +15,7 @@ PlantCare obtains your current location as well as weather prediction of the nex
 
 
 
-#### future plan
+#### Future Plan
 
 
 With support of experts, we will provide more comprehensive suggetions for agriculture like fertilizer amount.
@@ -38,7 +38,3 @@ Please contact our teammembers through GitHub or email (on project home page).
 * [pentium3](https://github.com/pentium3)
 
 Table 31
-
-## License
-
-WTFPL
