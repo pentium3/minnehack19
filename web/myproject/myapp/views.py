@@ -51,11 +51,15 @@ def list(request):
     plant = request.GET.get('choices-single-defaul','')
     results = []
     if zipcode:
-        results += str(zipcode)
+        results.append(str(zipcode))
     if plant:
-        results += str(plant)
+        results.append(str(plant))
     print(zipcode)
     print(plant)
+    if(zipcode and plant):
+        res = classify(zipcode, plant)
+        results.append(res)
+    print(results)
     return render(
         request,
         'list.html',
