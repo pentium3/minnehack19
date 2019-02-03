@@ -52,6 +52,8 @@ def list(request):
     res = ""
     loc = []
     ans = []
+    _loc = ""
+    _ans = ""
     print(plant)
     if(plant):
         res = classify(plant, ip)
@@ -63,5 +65,5 @@ def list(request):
     return render(
         request,
         'list.html',
-        {'loc': loc, 'ans': ans,}
+        {'loc': _loc, 'ans': _ans,}
     )
