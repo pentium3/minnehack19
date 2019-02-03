@@ -1,52 +1,34 @@
-# SmartFarmer
+# PlantCare
 
 ## Introduction
+PlantCare is your best assistant in water conservation!
 
 ### Summary
 
-SmartFarmer is a website that could provide comprehensive and professional advice for farmers. With scientific planting plans designed by our experts, SmartFarmer can not only suggest you on how much to irrigate but also when to use fertilizers and what to used based on the conditions of your fram and rops.
+PlantCare is a website that provides professional agricultural advice for farmers in order to improve sustainable farming. At this stage, PlantCare provides farmers with accurate amount of water needed for irrigation in the next day. It combines scientific planting plans designed by agriculture experts as well as accurate weather prediction. For future plans, we will also add features including fertilization advice, which is influenced by weather, brands of fertilizer and soil condition. 
+
+
 
 ### Features
 
-
-#### current version
-
-
-
-
-
-With access to your location, we can get local weather information. We constructed a model to determine how much water corns are needed in different time, so that together with your sowing time, we provdie you suggestions of irrigation strategy.
+PlantCare obtains your current location as well as weather prediction of the next day. Based on the temperature, precipitation and air pressure, PlantCare calculates the evaporation capacity accurately. Taking into consideration of the age of your crop and the watering it needs at this stage, PlantCare offers you the amount of water needed for irrigation in millimeters. 
 
 
 
 #### future plan
 
 
-With support of experts, we can provide more comprehensive planting suggetions like fertilizer amount.
+With support of experts, we will provide more comprehensive suggetions for agriculture like fertilizer amount.
 
-What's more, since argriculture product price is mainly affected by supply and demand relation, if the web is wildly used by farmers, we can get a comparatively precise estimate of crop essentia, so that we can predict price.
+What's more, since argriculture product price is mainly affected by supply and demand relation, if the web is wildly used by farmers, we can get the estimate of crop price.
 
 ## Requirements
 
 django == 1.10.5
 
-## Installation
-
-## Usage
-```bash
-cd web
-
-```
-
-## Development
-
-## FAQ
-
-## Support
-
 ### Contact
 
-Please contact our teammembers through GitHub or email (on their home page).
+Please contact our teammembers through GitHub or email (on project home page).
 
 ## Authors and acknowledgment
 
