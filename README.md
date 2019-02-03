@@ -3,7 +3,7 @@
 ## Introduction
 PlantCare is your best assistant in water conservation!
 
-()[./corn-water.jpg]
+![](./corn-water.jpg)
 
 ### Summary
 
