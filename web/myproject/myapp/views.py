@@ -47,17 +47,15 @@ from myproject.myapp.classify import classify
 
  
 def list(request):
-    zipcode = request.GET.get('zipcode','')
+    ip = request.META['REMOTE_ADDR']
     plant = request.GET.get('choices-single-defaul','')
     results = []
-    if zipcode:
-        results.append(str(zipcode))
     if plant:
         results.append(str(plant))
-    print(zipcode)
     print(plant)
-    if(zipcode and plant):
-        res = classify(zipcode, plant)
+    print(ip)
+    if(plant):
+        res = classify(plant, ip)
         results.append(res)
     print(results)
     return render(
