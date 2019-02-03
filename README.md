@@ -3,6 +3,8 @@
 ## Introduction
 PlantCare is your best assistant in water conservation!
 
+()[./corn-water.jpg]
+
 ### Summary
 
 PlantCare is a website that provides professional agricultural advice for farmers in order to improve sustainable farming. At this stage, PlantCare provides farmers with accurate amount of water needed for irrigation in the next day. It combines scientific planting plans designed by agriculture experts as well as accurate weather prediction. For future plans, we will also add features including fertilization advice, which is influenced by weather, brands of fertilizer and soil condition. 
