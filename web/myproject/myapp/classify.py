@@ -25,7 +25,7 @@ def classify(PLANT, IP):
     t=80
     ft =(4.6411e-09*math.pow(t,5) + -1.8590e-06*math.pow(t,4) + 2.0746e-04 * math.pow(t,3) - 0.0043*math.pow(t,2) + 0.0302 * t + 2.9369)/4.046
     ans = round(max(0, ft - precip),3)
-    ret = loc + '+' +str(ans)
+    ret = loc + '|' +str(ans)
     print(ret)
     return(ret)
 
