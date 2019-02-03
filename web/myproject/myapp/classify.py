@@ -6,7 +6,7 @@ from io import BytesIO
 import json
 
 
-def classify(ZIP, PLANT, IP):
+def classify(PLANT, IP):
     url="http://api.apixu.com/v1/current.json?key=0dfa9b06e0f549ab86055800190302&q="+IP
     buffer = BytesIO()
     c = pycurl.Curl()
